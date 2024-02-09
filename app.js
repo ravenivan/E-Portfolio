@@ -6,6 +6,29 @@ function closeMenu() {
     document.body.classList.remove("open");
 }
 
+function switchModes() {
+    let root = document.documentElement;
+    var r = document.querySelector(':root');
+    var rs = getComputedStyle(r);
+
+    if (rs.getPropertyValue('--primary') === '#000000') {
+        root.style.setProperty('--primary', "white");
+        root.style.setProperty('--secondary', "black");
+        root.style.setProperty('--box-shadow', 'rgba(255, 255, 255, 0.7)');
+        document.querySelector('#blob__color').setAttribute("fill", "white");
+        document.querySelector('#blob__color2').setAttribute("fill", "white");
+        document.querySelector('#blob__color3').setAttribute("fill", "white");
+    } else {
+        root.style.setProperty('--primary', "#000000");
+        root.style.setProperty('--secondary', "white");
+        root.style.setProperty('--box-shadow', 'rgba(0, 0, 0, 0.1)')
+        document.querySelector('#blob__color').setAttribute("fill", "#000000");
+        document.querySelector('#blob__color2').setAttribute("fill", "#000000");
+        document.querySelector('#blob__color3').setAttribute("fill", "#000000");
+    }
+    
+}
+
 /* service_rqm9bwq */
 /* template_xuizs8p */
 /* -kBOZkcSo6PIMZ9mi */
