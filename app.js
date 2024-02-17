@@ -13,11 +13,11 @@ function switchModes() {
 
     if (rs.getPropertyValue('--primary') === '#000000') {
         root.style.setProperty('--primary', "white");
-        root.style.setProperty('--secondary', "black");
+        root.style.setProperty('--secondary', "#161B22");
         root.style.setProperty('--box-shadow', 'rgba(255, 255, 255, 0.7)');
-        document.querySelector('#blob__color').setAttribute("fill", "white");
-        document.querySelector('#blob__color2').setAttribute("fill", "white");
-        document.querySelector('#blob__color3').setAttribute("fill", "white");
+        document.querySelector('#blob__color').setAttribute("fill", "gainsboro");
+        document.querySelector('#blob__color2').setAttribute("fill", "gainsboro");
+        document.querySelector('#blob__color3').setAttribute("fill", "gainsboro");
     } else {
         root.style.setProperty('--primary', "#000000");
         root.style.setProperty('--secondary', "white");
