@@ -11,20 +11,17 @@ function switchModes() {
     var r = document.querySelector(':root');
     var rs = getComputedStyle(r);
 
-    if (rs.getPropertyValue('--primary') === '#000000') {
+    if (rs.getPropertyValue('--primary') === '#1d1d1e') {
         root.style.setProperty('--primary', "white");
-        root.style.setProperty('--secondary', "#161B22");
-        root.style.setProperty('--box-shadow', 'rgba(255, 255, 255, 0.7)');
-        document.querySelector('#blob__color').setAttribute("fill", "gainsboro");
-        document.querySelector('#blob__color2').setAttribute("fill", "gainsboro");
-        document.querySelector('#blob__color3').setAttribute("fill", "gainsboro");
+        root.style.setProperty('--secondary', "#1d1d1e");
+        root.style.setProperty('--nav-bar', "#313331");
+        root.style.setProperty('--project', "#313331");
+
     } else {
-        root.style.setProperty('--primary', "#000000");
+        root.style.setProperty('--primary', "#1d1d1e");
         root.style.setProperty('--secondary', "white");
-        root.style.setProperty('--box-shadow', 'rgba(0, 0, 0, 0.1)')
-        document.querySelector('#blob__color').setAttribute("fill", "#000000");
-        document.querySelector('#blob__color2').setAttribute("fill", "#000000");
-        document.querySelector('#blob__color3').setAttribute("fill", "#000000");
+        root.style.setProperty('--nav-bar', "white");
+        root.style.setProperty('--project', "white");
     }
     
 }
